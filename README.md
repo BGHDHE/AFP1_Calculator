@@ -8,11 +8,15 @@ Egy webes tudományos számológép fejlesztése, amely támogatja az alapvető 
 ## Technológiák
 ### Frontend
 HTML - Struktúra
+
 CSS - Megjelenés
 
 UI: Gombok, kijelző
+
 Eseménykezelés: pl.: gombra kattintás
+
 Adatok küldése feldolgozásra
+
 Eredmény megjelenítése
 
 
@@ -20,8 +24,11 @@ Eredmény megjelenítése
 TypeScript - Interakciók
 
 API - POST és GET
+
 JSON formátum
+
 Beérkező kifejezés feldolgozása
+
 Hibakezelés
 
 
