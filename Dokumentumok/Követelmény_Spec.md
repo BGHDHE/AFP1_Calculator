@@ -15,17 +15,13 @@ biztonságos, gyors és megbízható működést nyújt.
 
 ## Jelenlegi üzleti folyamatok modellje
 A felhasználó fizikai számológépen vagy mobilalkalmazásban végzi a számításokat.
-&darr
 Az előzmények gyakran nem tárolhatók, vagy csak az adott eszközön elérhetők.
-&darr
 Nincs központi, platformfüggetlen megoldás.
 
 
 ## Igényelt üzleti folyamatok modellje
 A felhasználó böngészőből megnyitja a számológép webalkalmazást.
-&darr
 Beírja a kifejezést → a rendszer kiszámolja → az eredmény megjelenik.
-&darr
 Az előzmények tárolódnak, és bármikor visszanézhetők.
 
 
