@@ -38,6 +38,7 @@ Visual Studio Code
 
 ## Csapat
 Fábián Szilárd BGHDHE
+
 Krizsó Csaba P4RIPL
 
 
