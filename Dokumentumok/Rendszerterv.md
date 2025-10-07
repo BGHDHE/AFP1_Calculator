@@ -19,3 +19,39 @@ Ennek célja, hogy a számológép:
 ## Projektterv
 
 ### Projektmunkásaok és felelősek
+
+A tudományos számológép fejlesztése **HTML**, **CSS** és **JavaScript** technológiákkal valósul meg.  
+A csapat tagjai a fejlesztés különböző területeiért felelnek, hogy a projekt átlátható és hatékony munkamegosztásban valósuljon meg.
+
+### Frontend
+
+**Tagok:**
+    + Krizsó Csaba
+    + Kerekes Benedek
+
+**Fő feladataik:**
+- A felhasználók által elérhető, interaktív felületek megtervezése és megvalósítása.  
+- A backend által biztosított funkciók integrálása a kliensoldali felületbe.  
+- Egységes és reszponzív design kialakítása, amely különböző eszközökön is megfelelően jelenik meg.
+
+### Backend
+
+**Tagok:**
+    + Hegedűs Gergő
+    + Fábián Szilárd
+
+**Fő feladataik:**
+- A frontend kiszolgálása a szükséges adatokkal és számítási logikával.  
+- Az alkalmazás logikai rétegének kialakítása **JavaScript** segítségével.
+
+### Tesztelés
+
+**Tagok:**
+    + Kerekes Benedek
+    + Krizsó Csaba
+    + Hegedűs Gergő
+    + Fábián Szilárd
+
+**Fő feladataik:**
+- A fejlesztett funkciók rendszeres tesztelése és hibajavítása az üzembe helyezés előtt.  
+- A hibák feltárása, dokumentálása és javításának nyomon követése.
