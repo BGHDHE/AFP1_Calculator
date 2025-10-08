@@ -55,4 +55,20 @@ K7 Reszponzivitás: A számolások komplexitástól függetlenül hamar kiszámo
 
 | Kép | Leírás |
 
-<img width="3204" height="1444" alt="Image" src="https://github.com/user-attachments/assets/a18a9578-a2a3-4f16-87ec-d76244101212" /> | Az oldal képernyőterve.
+<img width="3204" height="1444" alt="Image" src="https://github.com/user-attachments/assets/a18a9578-a2a3-4f16-87ec-d76244101212" /> Az oldal képernyőterve.
+
+## Forgatókönyv
+
+A felhasználó megnyitja a weboldalt ahol a számológép fogadja üres műveleti sávval és előzményekkel. Ezek után elkezdi begépelni a számológép gombjaival a kívánt egyenletet amik az a fölötti sávban megjelennek. A végén az egyenlőségjel lenyomása után kiíródik az eredmény illetve megjelenik az előzmények között is. Ezután ha a felhasználó új számolást kezd el akkor az előző eredmény tödlődik a sávból és a jelenlegi művelet mutatódik. Az előző művelet eredménnyel együtt pedig megmarad az előzmények ablakban. Több végzett művelet után pedig az elvégzett műveletek soronként jelennek meg az előzmények részben.
+
+## Fogalomtár
+
+Frontend: A felhasználói felület, amely HTML, CSS és TypeScript segítségével valósul meg.
+
+Backend: A szerveroldali logika, amely feldolgozza a kifejezéseket és visszaadja az eredményt.
+
+API (Application Programming Interface): A frontend és backend közötti kommunikációs réteg.
+
+Reszponzív dizájn: A felhasználói felület mobil és asztali nézetben is jól használható.
+
+Előzmények: A felhasználó által korábban megadott kifejezések és kiszámított eredmények listája.
