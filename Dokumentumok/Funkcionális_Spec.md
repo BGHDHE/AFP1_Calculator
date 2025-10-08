@@ -19,3 +19,38 @@ Manapság az embereknek szüksége van egy könnyen elérhető és kezelhető tu
 Az oldalon a látogatók képesek számolások végzésére és azok kiértékelésére.
 Kiértékelés után az érték megjelenik illetve eltárolódik későbbi megtekintésre.
 Ezek után a felhasználó képes korábbi számításait visszanézni vagy új számítást kezdeni.
+
+## Követelménylista
+| ID | Modul | Leírás | Prioritás |
+|----|-------|--------|-----------|
+| K1 | Felület | A rendszer tárolja és jelenítse meg az előzményeket | Magas |
+| K2 | Felület | A rendszer adjon hibaüzenetet helytelen bemenet esetén | Magas |
+| K3 | Felület | A rendszer legyen reszponzív (mobil/asztali eszközön is jól használható) | Közepes |
+| K4 | Számítás | A rendszer támogassa az alap aritmetikai műveleteket (+, -, *, /) | Magas |
+| K5 | Számítás | A rendszer támogassa a tudományos műveleteket (sin, cos, tan, log, ln, hatvány, gyök) | Magas |
+| K6 | Számítás | A rendszer kezelje a zárójeleket és a műveleti sorrendet | Magas |
+| K7 | Számítás | A számítás eredménye max. 300 ms alatt jelenjen meg | Alacsony |
+
+## Használati esetek
+
+Felhasználó: Képes számolásokat végezni az oldalon, valamint a korábban végrehajtott számolásokat képes visszatekinteni.
+
+## Megfeleltetés, hogyan fedik le a használati eseteket a követelmények
+
+K1 Tárolás: A felhasználók képesek korábbi számolásaikat visszanézni így ellenőrizni, hogy az eredményük valóban megfelelő-e.
+
+K2 Hibaüzenet: Amennyiben a felhasználó hibás egyenletet adna meg abban az esetben a program egy hibaüzenettel jelzi, hogy a számolás nem végrehajtható.
+
+K3 Reszponzivitás: A felhasználónak lehetősége van mobilon és asztali eszközön is könnyen folytatni matematikai műveleteket.
+
+K4 Alapműveletek: A felhasználók képesek alapvető aritmetikai műveletek végzésére az oldalon.
+
+K5 Tudományos művelete: Az oldal lehetőséget kínál komplexebb matematikai műveletek elvégzésére.
+
+K6 Zárójelkezelés: Felhasználók a műveleteikben képesek zárójeleket használni amit a számológép megfelelően kezel majd.
+
+K7 Reszponzivitás: A számolások komplexitástól függetlenül hamar kiszámolódnak, így elkerülve a felhasználó frusztrációját.
+
+## Képernyőterv
+
+| Kép | Leírás |
