@@ -52,6 +52,25 @@ A csapat tagjai a fejlesztés különböző területeiért felelnek, hogy a proj
     + Hegedűs Gergő
     + Fábián Szilárd
 
+Tesztelési fázisok:
+
+Egységteszt: egyes függvények és számítási műveletek helyes működésének ellenőrzése.
+
+Integrációs teszt: a frontend és a logikai réteg kapcsolatának ellenőrzése.
+
+Felhasználói teszt: a felület használhatóságának, elrendezésének és reszponzivitásának vizsgálata különböző képernyőméreteken.
+
+Teljesítményteszt: gyorsaság és stabilitás mérése nagyobb terhelés mellett.
+
+Tesztelési eljárások:
+
+Manuális funkcionális tesztelés különböző böngészőkben.
+
+Hibák észlelése, dokumentálása (pl. hibajegy formájában).
+
+Hibák javítása és újratesztelése.
+
+
 **Fő feladataik:**
 - A fejlesztett funkciók rendszeres tesztelése és hibajavítása az üzembe helyezés előtt.  
 - A hibák feltárása, dokumentálása és javításának nyomon követése.
