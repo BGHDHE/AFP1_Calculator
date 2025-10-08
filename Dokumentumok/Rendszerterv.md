@@ -96,3 +96,26 @@ A rendszernek a következő nemfunkcionális feltételeknek is eleget kell tenni
 
 - **Reszponzív design:**  
   A felhasználói felület automatikusan alkalmazkodik a képernyőmérethez, hogy a megjelenés minden eszközön megfelelő legyen.  
+
+  ## Fizikai környezet
+
+  A tudományos számológép egy **webalapú alkalmazás**, amely elsősorban **asztali platformra** készült, de reszponzív kialakításának köszönhetően **bármilyen eszközről** (PC, laptop, tablet, okostelefon) elérhető.
+
+Az alkalmazás futtatásához:
+- mindössze egy **modern webböngészőre** (pl. Chrome, Edge, Firefox)  
+- és **aktív internetkapcsolatra** van szükség.
+
+## Karbantartási terv
+
+A tudományos számológép rendszer hosszú távú működésének biztosítása érdekében rendszeres karbantartási és felügyeleti feladatokat szükséges elvégezni.  
+A karbantartás célja a stabilitás, a biztonság és a felhasználói élmény folyamatos fenntartása.
+
+### Tartalmi karbantartás
+
+Mivel az alkalmazás nem tartalomfeltöltésre szolgál, hanem felhasználói számításokat és adatokat kezel, a tartalmi karbantartás főként az adatok érvényességére és tisztaságára irányul.
+
+**Főbb feladatok:**
+- Az elmentett számítások, képletek és felhasználói adatok időszakos ellenőrzése és tisztítása, hogy elkerülhetők legyenek a felesleges vagy hibás bejegyzések.  
+- A rendszeres biztonsági mentések elvégzése az adatvesztés elkerülése érdekében.  
+- Az esetlegesen hibás vagy sérült adatok automatikus javítása vagy törlése.
+
