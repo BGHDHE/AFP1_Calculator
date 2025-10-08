@@ -2,7 +2,7 @@
 
 
 ## Projekt leírás
-Egy webes tudományos számológép fejlesztése, amely támogatja az alapvető és haladó matematikai műveleteket (összeadás, kivonás, szorzás, osztás, trigonometrikus függvények, logaritmusok stb.).
+Egy webes tudományos számológép fejlesztése, amely támogatja az alapvető és haladó matematikai műveleteket (összeadás, kivonás, szorzás, osztás, trigonometrikus függvények, logaritmusok stb.). Ezentúl az előre beépített képletekkel is tud a felhasználó számításokat végezni.
 
 
 ## Technológiák
@@ -21,7 +21,7 @@ Eredmény megjelenítése
 
 
 ### Backend
-TypeScript - Interakciók
+JavaScript - Interakciók
 
 API - POST és GET
 
@@ -43,3 +43,4 @@ Krizsó Csaba P4RIPL
 
 
 ## Mentor
+Molnár Máté
