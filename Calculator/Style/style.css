@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #000000c6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding-top: 30px;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+}
+
+.calculator, .formula_panel {
+  background: rgb(234, 234, 234);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.calculator {
+  width: 300px;
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #9b9b9b;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d1d1d1;
+}
+
+.formula_panel {
+  width: 280px;
+}
+
+#formula_inputs input {
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0;
+}
+
+#calculate_formula {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#formula_result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  body {
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calculator, .formula-panel {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  #display {
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  #calculate-formula {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .calculator, .formula-panel {
+    width: 100%;
+  }
+
+  #display {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+}
