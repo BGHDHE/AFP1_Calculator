@@ -54,3 +54,5 @@ K7 Reszponzivitás: A számolások komplexitástól függetlenül hamar kiszámo
 ## Képernyőterv
 
 | Kép | Leírás |
+
+![kepterv.png] | Az oldal képernyőterve.
