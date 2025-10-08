@@ -18,7 +18,7 @@ Ennek célja, hogy a számológép:
 
 ## Projektterv
 
-### Projektmunkásaok és felelősek
+### Projektmunkások és felelősek
 
 A tudományos számológép fejlesztése **HTML**, **CSS** és **JavaScript** technológiákkal valósul meg.  
 A csapat tagjai a fejlesztés különböző területeiért felelnek, hogy a projekt átlátható és hatékony munkamegosztásban valósuljon meg.
@@ -55,3 +55,44 @@ A csapat tagjai a fejlesztés különböző területeiért felelnek, hogy a proj
 **Fő feladataik:**
 - A fejlesztett funkciók rendszeres tesztelése és hibajavítása az üzembe helyezés előtt.  
 - A hibák feltárása, dokumentálása és javításának nyomon követése.
+
+## Követelmények
+
+### Funkcionális követelmények
+
+A tudományos számológép rendszer az alábbi funkcionális követelményeknek kell, hogy megfeleljen:
+
+- **Számítási műveletek kezelése:**  
+  Képes legyen alapvető és haladó matematikai műveletek elvégzésére (összeadás, kivonás, szorzás, osztás, hatványozás, gyökvonás, szögfüggvények stb.).  
+   
+
+- **Webes környezetben való működés:**  
+  A program **reszponzív webes felületen** működik, így számítógépen, tableten és okostelefonon egyaránt használható.  
+
+- **Vendégmód támogatása:**  
+  Bejelentkezés nélkül is használható a számológép alapfunkciói (gyors számítások, alapműveletek).  
+ 
+
+- **Frontend–Backend kommunikáció:**  
+  A webes felület gördülékenyen kommunikál a háttérrendszerrel, amely biztosítja a számítási logikát és az adatok tárolását.
+
+
+### Nemfunkcionális követelmények
+
+A rendszernek a következő nemfunkcionális feltételeknek is eleget kell tennie:
+   
+
+- **Felhasználóbarát működés:**  
+  Az oldal könnyen kezelhető, minimális informatikai tudással is használható.  
+
+- **Platformfüggetlenség:**  
+  A számológép teljes mértékben webes környezetben működik, nem igényel telepítést és külön kiegészítőket sem.  
+
+- **Erőforrás-hatékonyság:**  
+  A rendszer használatához elegendő egy okoseszköz (számítógép, tablet vagy telefon) és internethozzáférés, nincs szükség különleges hardverre.  
+
+- **Megbízhatóság és stabilitás:**  
+  A számítási eredmények pontosan, gyorsan és kiszámíthatóan jelenjenek meg minden környezetben.  
+
+- **Reszponzív design:**  
+  A felhasználói felület automatikusan alkalmazkodik a képernyőmérethez, hogy a megjelenés minden eszközön megfelelő legyen.  

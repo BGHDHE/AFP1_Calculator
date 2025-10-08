@@ -39,7 +39,7 @@ Az előzmények tárolódnak, és bármikor visszanézhetők.
 
 ## Fogalomtár
 
-Frontend: A felhasználói felület, amely HTML, CSS és TypeScript segítségével valósul meg.
+Frontend: A felhasználói felület, amely HTML, CSS és JavaScript segítségével valósul meg.
 
 Backend: A szerveroldali logika, amely feldolgozza a kifejezéseket és visszaadja az eredményt.
 
