@@ -41,6 +41,8 @@ Fábián Szilárd BGHDHE
 
 Krizsó Csaba P4RIPL
 
+Hegedűs Gergő EOQP48
+
 
 ## Mentor
 Molnár Máté
