@@ -69,6 +69,17 @@ Backend: A szerveroldali logika, amely feldolgozza a kifejezéseket és visszaad
 
 API (Application Programming Interface): A frontend és backend közötti kommunikációs réteg.
 
+Adatkezelés: Az alkalmazás a számítások során keletkezett adatokat (pl. előzmények) biztonságosan tárolja, és csak a szükséges ideig őrzi meg.
+
+Validáció: A bemeneti adatok ellenőrzése annak érdekében, hogy a felhasználó által megadott kifejezések matematikailag helyesek és feldolgozhatók legyenek.
+
+Teljesítmény: Az alkalmazás úgy kerül kialakításra, hogy nagy számítási terhelés mellett is gyorsan és stabilan működjön.
+
+Biztonság: A rendszer megakadályozza a rosszindulatú kódok vagy veszélyes kifejezések végrehajtását, így a felhasználói környezet védett marad.
+
+Tesztelés: A fejlesztés során egység- és integrációs tesztek biztosítják a rendszer megbízhatóságát és hibamentes működését.
+
 Reszponzív dizájn: A felhasználói felület mobil és asztali nézetben is jól használható.
+
 
 Előzmények: A felhasználó által korábban megadott kifejezések és kiszámított eredmények listája.
