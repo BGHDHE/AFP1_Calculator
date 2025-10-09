@@ -43,6 +43,8 @@ Krizsó Csaba P4RIPL
 
 Hegedűs Gergő EOQP48
 
+Kerekes Benedek E32PMA
+
 
 ## Mentor
 Molnár Máté
