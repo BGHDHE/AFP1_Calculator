@@ -48,6 +48,15 @@ button {
   cursor: pointer;
 }
 
+input[type="button"] {
+  font-size: 1.1rem;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #9b9b9b;
+  cursor: pointer;
+}
+
 button:hover {
   background: #d1d1d1;
 }
