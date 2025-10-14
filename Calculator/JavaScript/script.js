@@ -4,6 +4,12 @@ let input = document.getElementById("input");
 let equal = document.getElementById("equal");
 let clear = document.getElementById("clear");
 let historyContent = document.getElementById("historyContent");
+let clearHistory = document.getElementById("clearHistory");
+
+clearHistory.addEventListener("click", () => {
+    historyContent.innerHTML = "";
+});
+
 
 window.onload = () => {
     input.value = "";
