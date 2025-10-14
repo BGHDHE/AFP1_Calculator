@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <div class="history">
-      <h2 id="historyTitle">Előzmények</h2>
+      <h2>Előzmények</h2>
       <div id="historyContent"></div>
     </div>
     <div class="calculator">
@@ -17,12 +17,12 @@
       <input type="text" id="display">
 
       <div class="buttons">
-        <button>sin</button><button>cos</button><button>tan</button><button>log</button>
-        <button>e</button><button>π</button><button>^</button><button>C</button>
-        <input type="button" value="7" onclick="display.value +='7' "><input type="button" value="8" onclick="display.value +='8' "><input type="button" value="9" onclick="display.value +='9' "><input type="button" value="/" onclick="display.value +='/' ">
-        <input type="button" value="4" onclick="display.value +='4' "><input type="button" value="5" onclick="display.value +='5' "><input type="button" value="6" onclick="display.value +='6' "><input type="button" value="*" onclick="display.value +='*' ">
-        <input type="button" value="1" onclick="display.value +='1' "><input type="button" value="2" onclick="display.value +='2' "><input type="button" value="3" onclick="display.value +='3' "><input type="button" value="-" onclick="display.value +='-' ">
-        <input type="button" value="0" onclick="display.value +='0' "><input type="button" value="." onclick="display.value +='.' "><input type="button" value="+" onclick="display.value +='+' "><input type="button" value="=" onclick="display.value = eval(display.value) ">
+        <button data-number="sin">sin</button><button data-number="cos">cos</button><button data-number="tan">tan</button><button data-number="log">log</button>
+        <button data-number="e">e</button><button data-number="π">π</button><button data-number="^">^</button><button data-number="C" id="clear">C</button><button data-number="DEL" id="erase">DEL</button>
+         <button data-number="7">7</button><button data-number="8">8</button><button data-number="9">9</button><button data-number="/">/</button><button data-number="√">√</button>
+        <button data-number="4">4</button><button data-number="5">5</button><button data-number="6">6</button><button data-number="*">*</button><button data-number="!">!</button>
+        <button data-number="1">1</button><button data-number="2">2</button><button data-number="3">3</button><button data-number="-">-</button>
+        <button data-number="0">0</button><button data-number=".">.</button><button data-number="+">+</button><button data-number="=" id="equal">=</button>
       </div>
     </div>
 
