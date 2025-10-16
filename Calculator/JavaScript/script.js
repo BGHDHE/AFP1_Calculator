@@ -6,6 +6,17 @@ let clear = document.getElementById("clear");
 let historyContent = document.getElementById("historyContent");
 let clearHistory = document.getElementById("clearHistory");
 
+
+// --- Csak számok és engedélyezett karakterek engedélyezése ---
+input.addEventListener("keypress", (event) => {
+    const allowedChars = "0123456789.+-*/()%";
+    // engedélyezzük a backspace-t és entert is
+    if (!allowedChars.includes(event.key)) {
+        event.preventDefault();
+    }
+});
+
+
 // --- Képletválasztó elemek ---
 let formulaSelect = document.getElementById("formula_select");
 let formulaInputs = document.getElementById("formula_inputs");
