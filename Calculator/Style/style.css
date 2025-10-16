@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #000000c6;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -15,14 +15,22 @@ body {
 }
 
 .calculator, .formula_panel , .history {
-  background: rgb(234, 234, 234);
+  background: rgba(255, 255, 255, 0.95);
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .calculator {
   width: 300px;
+}
+
+.calculator h2,
+.formula_panel h2,
+.history h2 {
+  color: #667eea;
+  margin-top: 0;
+  font-weight: 600;
 }
 
 #display {
@@ -51,8 +59,38 @@ button {
 button:hover {
   background: #d1d1d1;
 }
+
 .history {
   width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;         
+  justify-content: space-between; 
+}
+
+#historyContent {
+  overflow-y: auto;  
+  margin-bottom: 10px;
+}
+
+.historyClearButton {
+  align-self: center; 
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ff4d4d;
+  color: white;
+  cursor: pointer;
+}
+
+.historyClearButton:hover {
+  background: #ff1a1a;
 }
 
 .formula_panel {
@@ -135,43 +173,4 @@ button:hover {
     font-size: 0.9rem;
     padding: 6px;
   }
-
-
-  .history {
-  width: 300px;
-  height: 500px;
-  background: rgb(234, 234, 234);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-}
-
-.history-body {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;         
-  justify-content: space-between; 
-}
-
-#historyContent {
-  overflow-y: auto;  
-  margin-bottom: 10px;
-}
-
-.historyClearButton {
-  align-self: center; 
-  padding: 8px 15px;
-  border: none;
-  border-radius: 8px;
-  background: #ff4d4d;
-  color: white;
-  cursor: pointer;
-}
-
-.historyClearButton:hover {
-  background: #ff1a1a;
-}
- 
 }
