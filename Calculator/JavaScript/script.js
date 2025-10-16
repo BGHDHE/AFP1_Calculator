@@ -248,4 +248,13 @@ function addToHistory(expression, result) {
 
     divItem.appendChild(span);
     historyContent.appendChild(divItem);
+
+     // --- KATTINTÁS AZ ELŐZMÉNYRE = VISSZATÖLTÉS ---
+    span.addEventListener("click", () => {
+        input.value = expression;
+        input.focus();
+    });
+
+    divItem.appendChild(span);
+    historyContent.appendChild(divItem);
 }
