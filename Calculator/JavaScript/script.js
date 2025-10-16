@@ -33,20 +33,48 @@ buttonInput.forEach((buttonClass) => {
             return;
         }
 
-         if (value === "DEL") {
+        if (value === "DEL") {
             input.value = input.value.slice(0, -1);
             return;
         }
-        
-           // Százalék kezelése
+
+          // Százalék kezelése 
         if (value === "%") {
-            try {
+            let currentInput = input.value;
+                      
+            let lastOperatorIndex = -1;
+            let operator = '';
+            
+           
+            for (let i = currentInput.length - 1; i >= 0; i--) {
+                if (['+', '-', '*', '/'].includes(currentInput[i])) {
+                    lastOperatorIndex = i;
+                    operator = currentInput[i];
+                    break;
+                }
+            }
+            
+            if (lastOperatorIndex > 0) {
+                let base = parseFloat(currentInput.substring(0, lastOperatorIndex));
+                let percent = parseFloat(currentInput.substring(lastOperatorIndex + 1));
+                
+                if (!isNaN(base) && !isNaN(percent)) {
+                    if (operator === '+' || operator === '-') {
+                       
+                        let percentValue = base * percent / 100;
+                        input.value = base + operator + percentValue;
+                    } else if (operator === '*' || operator === '/') {
+                        
+                        let percentValue = percent / 100;
+                        input.value = base + operator + percentValue;
+                    }
+                }
+            } else {
+                
                 let currentValue = parseFloat(input.value);
                 if (!isNaN(currentValue)) {
                     input.value = currentValue / 100;
                 }
-            } catch (e) {
-                input.value += value;
             }
             return;
         }
