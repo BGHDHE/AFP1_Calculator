@@ -33,6 +33,24 @@ buttonInput.forEach((buttonClass) => {
             return;
         }
 
+         if (value === "DEL") {
+            input.value = input.value.slice(0, -1);
+            return;
+        }
+        
+           // Százalék kezelése
+        if (value === "%") {
+            try {
+                let currentValue = parseFloat(input.value);
+                if (!isNaN(currentValue)) {
+                    input.value = currentValue / 100;
+                }
+            } catch (e) {
+                input.value += value;
+            }
+            return;
+        }
+
         input.value += value;
     });
 });
