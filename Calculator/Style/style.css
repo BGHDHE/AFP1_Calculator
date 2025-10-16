@@ -22,6 +22,18 @@ body {
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .calculator {
@@ -102,16 +114,21 @@ button:active {
 
 .historyClearButton {
   align-self: center; 
-  padding: 8px 15px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 8px;
-  background: #ff4d4d;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   color: white;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
 }
 
 .historyClearButton:hover {
-  background: #ff1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
 }
 
 .formula_panel {
@@ -143,17 +160,45 @@ button:active {
 #calculate_formula {
   margin-top: 10px;
   width: 100%;
-  padding: 10px;
-  background: green;
+  padding: 12px;
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
   color: white;
+  font-weight: 600;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(67, 233, 123, 0.4);
+}
+
+#calculate_formula:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(67, 233, 123, 0.6);
+  background: linear-gradient(135deg, #38f9d7 0%, #43e97b 100%);
 }
 
 #formula_result {
   margin-top: 10px;
   font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#formula_select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#formula_select option {
+  background: #764ba2;
+  color: white;
 }
 
 @media (max-width: 800px) {
