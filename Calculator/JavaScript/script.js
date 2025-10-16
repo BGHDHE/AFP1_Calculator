@@ -77,23 +77,40 @@ formulaSelect.addEventListener("change", () => {
         case "circle_area":
         case "circle_circumference":
         case "sphere_volume":
+        case "sphere_surface":
             formulaInputs.innerHTML = `<label>Sugár (r):</label><input type="number" id="r">`;
             break;
+
         case "rectangle_area":
-        case "triangle_area":
-            formulaInputs.innerHTML = `<label>Oldal/Alap (a):</label><input type="number" id="a">
-                                       <label>Oldal/Magasság (b/m):</label><input type="number" id="b">`;
+        case "rectangle_perimeter":
+            formulaInputs.innerHTML = `<label>Oldal a:</label><input type="number" id="a">
+                                       <label>Oldal b:</label><input type="number" id="b">`;
             break;
+
+        case "triangle_area":
+            formulaInputs.innerHTML = `<label>Alap (a):</label><input type="number" id="a">
+                                       <label>Magasság (mₐ):</label><input type="number" id="b">`;
+            break;
+
+        case "triangle_perimeter":
+            formulaInputs.innerHTML = `<label>Oldal a:</label><input type="number" id="a">
+                                       <label>Oldal b:</label><input type="number" id="b">
+                                       <label>Oldal c:</label><input type="number" id="c">`;
+            break;
+
         case "cylinder_volume":
+        case "cylinder_surface":
             formulaInputs.innerHTML = `<label>Sugár (r):</label><input type="number" id="r">
                                        <label>Magasság (h):</label><input type="number" id="h">`;
             break;
+
         case "ohm_law":
             formulaInputs.innerHTML = `<label>Ellenállás (R):</label><input type="number" id="R">
                                        <label>Áramerősség (I):</label><input type="number" id="I">`;
             break;
     }
 });
+
 
 // --- Képlet számítása és előzmények mentése ---
 calculateFormula.addEventListener("click", () => {
@@ -103,63 +120,107 @@ calculateFormula.addEventListener("click", () => {
 
     try {
         switch (val) {
-            case "circle_area":
-                let r1 = parseFloat(document.getElementById("r").value);
-                if (isNaN(r1)) throw new Error("Hiányzó adat");
-                result = Math.PI * r1 ** 2;
-                expressionText = `Kör területe (π·${r1}²)`;
-                break;
+    case "circle_area": {
+        let r = parseFloat(document.getElementById("r").value);
+        if (isNaN(r)) throw new Error("Hiányzó adat");
+        result = Math.PI * r ** 2;
+        expressionText = `Kör területe (π·${r}²)`;
+        break;
+    }
 
-            case "circle_circumference":
-                let r2 = parseFloat(document.getElementById("r").value);
-                if (isNaN(r2)) throw new Error("Hiányzó adat");
-                result = 2 * Math.PI * r2;
-                expressionText = `Kör kerülete (2·π·${r2})`;
-                break;
+    case "circle_circumference": {
+        let r = parseFloat(document.getElementById("r").value);
+        if (isNaN(r)) throw new Error("Hiányzó adat");
+        result = 2 * Math.PI * r;
+        expressionText = `Kör kerülete (2·π·${r})`;
+        break;
+    }
 
-            case "rectangle_area":
-                let a1 = parseFloat(document.getElementById("a").value);
-                let b1 = parseFloat(document.getElementById("b").value);
-                if (isNaN(a1) || isNaN(b1)) throw new Error("Hiányzó adat");
-                result = a1 * b1;
-                expressionText = `Téglalap területe (${a1}·${b1})`;
-                break;
+    case "rectangle_area": {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        if (isNaN(a) || isNaN(b)) throw new Error("Hiányzó adat");
+        result = a * b;
+        expressionText = `Téglalap területe (${a}·${b})`;
+        break;
+    }
 
-            case "triangle_area":
-                let a2 = parseFloat(document.getElementById("a").value);
-                let m = parseFloat(document.getElementById("b").value);
-                if (isNaN(a2) || isNaN(m)) throw new Error("Hiányzó adat");
-                result = 0.5 * a2 * m;
-                expressionText = `Háromszög területe (½·${a2}·${m})`;
-                break;
+    case "rectangle_perimeter": {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        if (isNaN(a) || isNaN(b)) throw new Error("Hiányzó adat");
+        result = 2 * (a + b);
+        expressionText = `Téglalap kerülete (2·(${a} + ${b}))`;
+        break;
+    }
 
-            case "sphere_volume":
-                let rs = parseFloat(document.getElementById("r").value);
-                if (isNaN(rs)) throw new Error("Hiányzó adat");
-                result = (4 / 3) * Math.PI * Math.pow(rs, 3);
-                expressionText = `Gömb térfogata (4/3·π·${rs}³)`;
-                break;
+    case "triangle_area": {
+        let a = parseFloat(document.getElementById("a").value);
+        let m = parseFloat(document.getElementById("b").value);
+        if (isNaN(a) || isNaN(m)) throw new Error("Hiányzó adat");
+        result = 0.5 * a * m;
+        expressionText = `Háromszög területe (½·${a}·${m})`;
+        break;
+    }
 
-            case "cylinder_volume":
-                let rc = parseFloat(document.getElementById("r").value);
-                let h = parseFloat(document.getElementById("h").value);
-                if (isNaN(rc) || isNaN(h)) throw new Error("Hiányzó adat");
-                result = Math.PI * rc ** 2 * h;
-                expressionText = `Henger térfogata (π·${rc}²·${h})`;
-                break;
+    case "triangle_perimeter": {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let c = parseFloat(document.getElementById("c").value);
+        if (isNaN(a) || isNaN(b) || isNaN(c)) throw new Error("Hiányzó adat");
+        result = a + b + c;
+        expressionText = `Háromszög kerülete (${a} + ${b} + ${c})`;
+        break;
+    }
 
-            case "ohm_law":
-                let R = parseFloat(document.getElementById("R").value);
-                let I = parseFloat(document.getElementById("I").value);
-                if (isNaN(R) || isNaN(I)) throw new Error("Hiányzó adat");
-                result = R * I;
-                expressionText = `Ohm törvénye (${R}·${I})`;
-                break;
+    case "sphere_volume": {
+        let r = parseFloat(document.getElementById("r").value);
+        if (isNaN(r)) throw new Error("Hiányzó adat");
+        result = (4 / 3) * Math.PI * Math.pow(r, 3);
+        expressionText = `Gömb térfogata (4/3·π·${r}³)`;
+        break;
+    }
 
-            default:
-                formulaResult.textContent = "Kérlek, válassz képletet!";
-                return;
-        }
+    case "sphere_surface": {
+        let r = parseFloat(document.getElementById("r").value);
+        if (isNaN(r)) throw new Error("Hiányzó adat");
+        result = 4 * Math.PI * r ** 2;
+        expressionText = `Gömb felszíne (4·π·${r}²)`;
+        break;
+    }
+
+    case "cylinder_volume": {
+        let r = parseFloat(document.getElementById("r").value);
+        let h = parseFloat(document.getElementById("h").value);
+        if (isNaN(r) || isNaN(h)) throw new Error("Hiányzó adat");
+        result = Math.PI * r ** 2 * h;
+        expressionText = `Henger térfogata (π·${r}²·${h})`;
+        break;
+    }
+
+    case "cylinder_surface": {
+        let r = parseFloat(document.getElementById("r").value);
+        let h = parseFloat(document.getElementById("h").value);
+        if (isNaN(r) || isNaN(h)) throw new Error("Hiányzó adat");
+        result = 2 * Math.PI * r * (r + h);
+        expressionText = `Henger felszíne (2·π·${r}·(${r} + ${h}))`;
+        break;
+    }
+
+    case "ohm_law": {
+        let R = parseFloat(document.getElementById("R").value);
+        let I = parseFloat(document.getElementById("I").value);
+        if (isNaN(R) || isNaN(I)) throw new Error("Hiányzó adat");
+        result = R * I;
+        expressionText = `Ohm törvénye (${R}·${I})`;
+        break;
+    }
+
+    default:
+        formulaResult.textContent = "Kérlek, válassz képletet!";
+        return;
+}
+
 
         formulaResult.textContent = `Eredmény: ${result.toFixed(2)}`;
 
