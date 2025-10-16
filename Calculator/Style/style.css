@@ -31,9 +31,10 @@ body {
 .calculator h2,
 .formula_panel h2,
 .history h2 {
-  color: #667eea;
+  color: #ffffff;
   margin-top: 0;
   font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #display {
@@ -42,6 +43,12 @@ body {
   font-size: 1.5rem;
   text-align: right;
   margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 0 10px;
+  color: white;
+  font-weight: 500;
 }
 
 .buttons {
@@ -54,13 +61,24 @@ button {
   font-size: 1.1rem;
   padding: 10px;
   border: none;
-  border-radius: 8px;
-  background: #9b9b9b;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 button:hover {
-  background: #d1d1d1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
 }
 
 .history {
@@ -102,8 +120,24 @@ button:hover {
 
 #formula_inputs input {
   width: 100%;
-  padding: 6px;
+  padding: 8px;
   margin: 5px 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+}
+
+#formula_inputs input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#formula_inputs label {
+  color: white;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 8px;
 }
 
 #calculate_formula {
