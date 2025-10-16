@@ -38,6 +38,19 @@ body {
 
 .calculator {
   width: 300px;
+  animation-delay: 0.2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.history {
+  animation-delay: 0s;
+}
+
+.formula_panel {
+  animation-delay: 0.4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .calculator h2,
@@ -61,6 +74,13 @@ body {
   padding: 0 10px;
   color: white;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#display:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
 }
 
 .buttons {
@@ -80,11 +100,32 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:active::before {
+  width: 300px;
+  height: 300px;
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6), 
+              0 0 30px rgba(102, 126, 234, 0.4);
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
@@ -98,6 +139,9 @@ button:active {
   height: 500px;
   display: flex;
   flex-direction: column;
+  animation-delay: 0s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .history-body {
@@ -110,6 +154,37 @@ button:active {
 #historyContent {
   overflow-y: auto;  
   margin-bottom: 10px;
+}
+
+.historyItem {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideIn 0.3s ease-out;
+  transition: all 0.3s ease;
+}
+
+.historyItem:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.historyItem span {
+  color: white;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .historyClearButton {
@@ -144,6 +219,14 @@ button:active {
   border-radius: 8px;
   color: white;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#formula_inputs input:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 #formula_inputs input::placeholder {
