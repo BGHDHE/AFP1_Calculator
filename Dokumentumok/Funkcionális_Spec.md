@@ -55,7 +55,7 @@ K7 Reszponzivitás: A számolások komplexitástól függetlenül hamar kiszámo
 
 | Kép | Leírás |
 
-<img width="3204" height="1444" alt="Image" src="https://github.com/user-attachments/assets/a18a9578-a2a3-4f16-87ec-d76244101212" /> Az oldal képernyőterve.
+<img width="1176" height="604" alt="Image" src="https://github.com/user-attachments/assets/ad77ade1-57cf-4cb5-9dbc-cfa7b02dc063" /> Az oldal képernyőterve.
 
 ## Forgatókönyv
 
