@@ -84,48 +84,35 @@ buttonInput.forEach((buttonClass) => {
 });
 
 // --- Számológép egyenlő gomb ---
-// --- Számológép egyenlő gomb ---
 equal.addEventListener("click", () => {
     equalPressed = 1;
     let inputValue = input.value;
 
     try {
-        // Alap kifejezések cseréje
         let expression = inputValue
+            .replaceAll("sin", "Math.sin")
+            .replaceAll("cos", "Math.cos")
+            .replaceAll("tan", "Math.tan")
             .replaceAll("log", "Math.log10")
             .replaceAll("e", "Math.E")
             .replaceAll("π", "Math.PI")
             .replaceAll("^", "**");
 
-        // --- Fok → radián konverzió trigonometrikus függvényekhez ---
-        expression = expression.replace(/sin\(([^)]+)\)/g, (match, p1) => {
-            return `Math.sin(${p1} * Math.PI / 180)`;
-        });
-        expression = expression.replace(/cos\(([^)]+)\)/g, (match, p1) => {
-            return `Math.cos(${p1} * Math.PI / 180)`;
-        });
-        expression = expression.replace(/tan\(([^)]+)\)/g, (match, p1) => {
-            return `Math.tan(${p1} * Math.PI / 180)`;
-        });
-
-        // --- Kifejezés kiértékelése ---
         let result = eval(expression);
 
         if (Number.isNaN(result) || !Number.isFinite(result)) {
             throw new Error("Helytelen művelet");
         }
 
-        // Ha egész szám, ne írjon tizedesjegyet, különben 2 tizedes
         input.value = Number.isInteger(result) ? result : result.toFixed(2);
 
         // --- Előzményekbe mentés ---
         addToHistory(inputValue, input.value);
 
     } catch (error) {
-        alert("Hiba: " + error.message);
+        alert("Error: " + error.message);
     }
 });
-
 
 // --- Képletválasztó változtatás ---
 formulaSelect.addEventListener("change", () => {
