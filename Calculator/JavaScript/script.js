@@ -1,6 +1,6 @@
 let equalPressed = 0;
 let buttonInput = document.querySelectorAll(".button");
-let input = document.getElementById("input");
+let input = document.getElementById("expression");
 let equal = document.getElementById("equal");
 let clear = document.getElementById("clear");
 let historyContent = document.getElementById("historyContent");
